@@ -34,6 +34,9 @@
             this.label_Header_Title = new System.Windows.Forms.Label();
             this.panel_Menu = new System.Windows.Forms.Panel();
             this.panel_Buttons = new System.Windows.Forms.Panel();
+            this.checkBox_Theme = new System.Windows.Forms.CheckBox();
+            this.button_2048 = new System.Windows.Forms.Button();
+            this.button_Minesweeper = new System.Windows.Forms.Button();
             this.button_PasswordGenerator = new System.Windows.Forms.Button();
             this.button_Calendar = new System.Windows.Forms.Button();
             this.button_Pomodoro = new System.Windows.Forms.Button();
@@ -65,7 +68,6 @@
             this.button_Close.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_Close.FlatAppearance.BorderSize = 0;
             this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Close.Image = global::Skolsky_pomocnik.Properties.Resources.Icon_Close;
             this.button_Close.Location = new System.Drawing.Point(1275, 10);
             this.button_Close.Margin = new System.Windows.Forms.Padding(0);
             this.button_Close.Name = "button_Close";
@@ -80,7 +82,6 @@
             this.button_Minimize.FlatAppearance.BorderSize = 0;
             this.button_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Minimize.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Minimize.Image = global::Skolsky_pomocnik.Properties.Resources.Icon_Minimize;
             this.button_Minimize.Location = new System.Drawing.Point(1169, 10);
             this.button_Minimize.Margin = new System.Windows.Forms.Padding(0);
             this.button_Minimize.Name = "button_Minimize";
@@ -116,6 +117,9 @@
             // 
             // panel_Buttons
             // 
+            this.panel_Buttons.Controls.Add(this.checkBox_Theme);
+            this.panel_Buttons.Controls.Add(this.button_2048);
+            this.panel_Buttons.Controls.Add(this.button_Minesweeper);
             this.panel_Buttons.Controls.Add(this.button_PasswordGenerator);
             this.panel_Buttons.Controls.Add(this.button_Calendar);
             this.panel_Buttons.Controls.Add(this.button_Pomodoro);
@@ -125,6 +129,42 @@
             this.panel_Buttons.Name = "panel_Buttons";
             this.panel_Buttons.Size = new System.Drawing.Size(218, 736);
             this.panel_Buttons.TabIndex = 6;
+            // 
+            // checkBox_Theme
+            // 
+            this.checkBox_Theme.AutoSize = true;
+            this.checkBox_Theme.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.checkBox_Theme.Location = new System.Drawing.Point(3, 676);
+            this.checkBox_Theme.Name = "checkBox_Theme";
+            this.checkBox_Theme.Size = new System.Drawing.Size(215, 49);
+            this.checkBox_Theme.TabIndex = 9;
+            this.checkBox_Theme.Text = "Dark Mode";
+            this.checkBox_Theme.UseVisualStyleBackColor = true;
+            this.checkBox_Theme.CheckedChanged += new System.EventHandler(this.checkBox_Theme_CheckedChanged);
+            // 
+            // button_2048
+            // 
+            this.button_2048.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_2048.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_2048.Location = new System.Drawing.Point(0, 220);
+            this.button_2048.Name = "button_2048";
+            this.button_2048.Size = new System.Drawing.Size(218, 44);
+            this.button_2048.TabIndex = 8;
+            this.button_2048.Text = "2048";
+            this.button_2048.UseVisualStyleBackColor = true;
+            this.button_2048.Click += new System.EventHandler(this.button_2048_Click);
+            // 
+            // button_Minesweeper
+            // 
+            this.button_Minesweeper.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_Minesweeper.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_Minesweeper.Location = new System.Drawing.Point(0, 176);
+            this.button_Minesweeper.Name = "button_Minesweeper";
+            this.button_Minesweeper.Size = new System.Drawing.Size(218, 44);
+            this.button_Minesweeper.TabIndex = 7;
+            this.button_Minesweeper.Text = "Minesweeper";
+            this.button_Minesweeper.UseVisualStyleBackColor = true;
+            this.button_Minesweeper.Click += new System.EventHandler(this.button_Minesweeper_Click);
             // 
             // button_PasswordGenerator
             // 
@@ -221,6 +261,7 @@
             this.panel_Header.PerformLayout();
             this.panel_Menu.ResumeLayout(false);
             this.panel_Buttons.ResumeLayout(false);
+            this.panel_Buttons.PerformLayout();
             this.panel_Menu_Title.ResumeLayout(false);
             this.panel_Menu_Title.PerformLayout();
             this.ResumeLayout(false);
@@ -241,6 +282,9 @@
         private System.Windows.Forms.Panel panel_Buttons;
         private System.Windows.Forms.Button button_Calendar;
         private System.Windows.Forms.Button button_PasswordGenerator;
+        private System.Windows.Forms.Button button_Minesweeper;
+        private System.Windows.Forms.Button button_2048;
+        private System.Windows.Forms.CheckBox checkBox_Theme;
     }
 }
 

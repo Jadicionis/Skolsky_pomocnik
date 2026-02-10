@@ -12,10 +12,13 @@ namespace Skolsky_pomocnik
 {
     public partial class PomodoroTimerControl : UserControl
     {
-        private Timer timer = new Timer();
-        private int remainingSeconds = 0;
-        private bool isWorkInterval = true;
-        private int initialSeconds = 0; // Track the starting time
+        Timer timer = new Timer();
+        int remainingSeconds = 0;
+        bool isWorkInterval = true;
+        int initialSeconds = 0; // Track the starting time
+
+        public event EventHandler DisableGameButtons;
+        public event EventHandler EnableGameButtons;
 
         public PomodoroTimerControl()
         {
@@ -39,11 +42,13 @@ namespace Skolsky_pomocnik
                 }
                 timer.Start();
                 button_Start_Stop.Text = "Zastaviť";
+                DisableGameButtons.Invoke(this, EventArgs.Empty);
             }
             else
             {
                 timer.Stop();
                 button_Start_Stop.Text = "Spustiť";
+                EnableGameButtons.Invoke(this, EventArgs.Empty);
 
                 // Log pause to history
                 int elapsedSeconds = initialSeconds - remainingSeconds;

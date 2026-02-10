@@ -73,9 +73,29 @@ namespace Skolsky_pomocnik.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_Close_White {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Close_White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_Minimize {
             get {
                 object obj = ResourceManager.GetObject("Icon_Minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_Minimize_White {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Minimize_White", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

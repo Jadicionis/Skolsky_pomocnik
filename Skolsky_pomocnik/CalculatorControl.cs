@@ -13,19 +13,22 @@ namespace Skolsky_pomocnik
     public partial class CalculatorControl : UserControl
     {
 
-        private double currentValue = 0;
-        private string currentOperator = "";
-        private bool operatorPressed = false;
-        private bool resultDisplayed = false;
+        double currentValue = 0;
+        string currentOperator = "";
+        bool operatorPressed = false;
+        bool resultDisplayed = false;
 
         public CalculatorControl()
         {
             InitializeComponent();
         }
 
+        // Pridanie cisiel do jednej metody
         private void Number_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
+
+            // Ak je aktuálny text "0" alebo bol stlačený operátor alebo zobrazený výsledok, nahradíme text tlačidlom
 
             if (textBox_Output.Text == "0" || operatorPressed || resultDisplayed)
             {
@@ -87,8 +90,10 @@ namespace Skolsky_pomocnik
             resultDisplayed = false;
         }
 
+        // Odstránenie posledného znaku
         private void button_Calculator_BCKSPC_Click(object sender, EventArgs e)
         {
+            // Ak je text dlhší než 1 znak, odstraníme poslední znak, inak nastavíme text na "0"
             if (textBox_Output.Text.Length > 1)
                 textBox_Output.Text = textBox_Output.Text.Substring(0, textBox_Output.Text.Length - 1);
             else

@@ -64,6 +64,18 @@
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game2048Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Game2048Control.Designer.cs">
+      <DependentUpon>Game2048Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinesweeperControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MinesweeperControl.Designer.cs">
+      <DependentUpon>MinesweeperControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="PasswordGeneratorControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,6 +90,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeHelper.cs" />
+    <Compile Include="ThemeManager.cs" />
     <EmbeddedResource Include="CalculatorControl.resx">
       <DependentUpon>CalculatorControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +106,12 @@
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Game2048Control.resx">
+      <DependentUpon>Game2048Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinesweeperControl.resx">
+      <DependentUpon>MinesweeperControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PasswordGeneratorControl.resx">
       <DependentUpon>PasswordGeneratorControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,14 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
