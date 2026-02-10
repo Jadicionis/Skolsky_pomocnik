@@ -114,7 +114,7 @@ namespace Skolsky_pomocnik
             if (r < 0 || r > 3 || c < 0 || c > 3)
                 return;
 
-            // 1️⃣ výber bloku
+            // 1️ výber bloku
             if (!hasSelection)
             {
                 if (grid[r, c] == 0)
@@ -126,7 +126,7 @@ namespace Skolsky_pomocnik
                 return;
             }
 
-            // 2️⃣ cieľ – MUSÍ byť sused
+            // 2️ cieľ – MUSÍ byť sused
             int dr = r - selected.X;
             int dc = c - selected.Y;
 
