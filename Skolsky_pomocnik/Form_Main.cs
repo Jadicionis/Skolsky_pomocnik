@@ -76,5 +76,10 @@ namespace Skolsky_pomocnik
         {
             ShowApp(new CalendarControl());
         }
+
+        private void button_PasswordGenerator_Click(object sender, EventArgs e)
+        {
+            ShowApp(new PasswordGeneratorControl());
+        }
     }
 }
