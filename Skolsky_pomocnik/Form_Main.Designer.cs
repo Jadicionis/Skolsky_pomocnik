@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panel_Header = new System.Windows.Forms.Panel();
-            this.button_Close = new System.Windows.Forms.Button();
-            this.button_Minimize = new System.Windows.Forms.Button();
             this.label_Header_Title = new System.Windows.Forms.Label();
             this.panel_Menu = new System.Windows.Forms.Panel();
             this.panel_Menu_Title = new System.Windows.Forms.Panel();
@@ -39,6 +37,9 @@
             this.button_calculator = new System.Windows.Forms.Button();
             this.panel_Content = new System.Windows.Forms.Panel();
             this.panel_Buttons = new System.Windows.Forms.Panel();
+            this.button_Close = new System.Windows.Forms.Button();
+            this.button_Minimize = new System.Windows.Forms.Button();
+            this.button_Calendar = new System.Windows.Forms.Button();
             this.panel_Header.SuspendLayout();
             this.panel_Menu.SuspendLayout();
             this.panel_Menu_Title.SuspendLayout();
@@ -57,35 +58,6 @@
             this.panel_Header.Size = new System.Drawing.Size(1350, 85);
             this.panel_Header.TabIndex = 1;
             this.panel_Header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Header_MouseDown);
-            // 
-            // button_Close
-            // 
-            this.button_Close.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_Close.FlatAppearance.BorderSize = 0;
-            this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Close.Image = global::Skolsky_pomocnik.Properties.Resources.Icon_Close;
-            this.button_Close.Location = new System.Drawing.Point(1275, 10);
-            this.button_Close.Margin = new System.Windows.Forms.Padding(0);
-            this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(60, 62);
-            this.button_Close.TabIndex = 1;
-            this.button_Close.UseVisualStyleBackColor = true;
-            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
-            // 
-            // button_Minimize
-            // 
-            this.button_Minimize.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_Minimize.FlatAppearance.BorderSize = 0;
-            this.button_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Minimize.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Minimize.Image = global::Skolsky_pomocnik.Properties.Resources.Icon_Minimize;
-            this.button_Minimize.Location = new System.Drawing.Point(1169, 10);
-            this.button_Minimize.Margin = new System.Windows.Forms.Padding(0);
-            this.button_Minimize.Name = "button_Minimize";
-            this.button_Minimize.Size = new System.Drawing.Size(60, 62);
-            this.button_Minimize.TabIndex = 1;
-            this.button_Minimize.UseVisualStyleBackColor = true;
-            this.button_Minimize.Click += new System.EventHandler(this.button_Minimize_Click);
             // 
             // label_Header_Title
             // 
@@ -139,7 +111,7 @@
             this.label_Menu.AutoSize = true;
             this.label_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_Menu.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label_Menu.Location = new System.Drawing.Point(39, 31);
+            this.label_Menu.Location = new System.Drawing.Point(49, 34);
             this.label_Menu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Menu.Name = "label_Menu";
             this.label_Menu.Size = new System.Drawing.Size(120, 32);
@@ -169,6 +141,7 @@
             // 
             // panel_Buttons
             // 
+            this.panel_Buttons.Controls.Add(this.button_Calendar);
             this.panel_Buttons.Controls.Add(this.button_Pomodoro);
             this.panel_Buttons.Controls.Add(this.button_calculator);
             this.panel_Buttons.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -176,6 +149,47 @@
             this.panel_Buttons.Name = "panel_Buttons";
             this.panel_Buttons.Size = new System.Drawing.Size(218, 736);
             this.panel_Buttons.TabIndex = 6;
+            // 
+            // button_Close
+            // 
+            this.button_Close.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_Close.FlatAppearance.BorderSize = 0;
+            this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Close.Image = global::Skolsky_pomocnik.Properties.Resources.Icon_Close;
+            this.button_Close.Location = new System.Drawing.Point(1275, 10);
+            this.button_Close.Margin = new System.Windows.Forms.Padding(0);
+            this.button_Close.Name = "button_Close";
+            this.button_Close.Size = new System.Drawing.Size(60, 62);
+            this.button_Close.TabIndex = 1;
+            this.button_Close.UseVisualStyleBackColor = true;
+            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
+            // 
+            // button_Minimize
+            // 
+            this.button_Minimize.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_Minimize.FlatAppearance.BorderSize = 0;
+            this.button_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Minimize.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Minimize.Image = global::Skolsky_pomocnik.Properties.Resources.Icon_Minimize;
+            this.button_Minimize.Location = new System.Drawing.Point(1169, 10);
+            this.button_Minimize.Margin = new System.Windows.Forms.Padding(0);
+            this.button_Minimize.Name = "button_Minimize";
+            this.button_Minimize.Size = new System.Drawing.Size(60, 62);
+            this.button_Minimize.TabIndex = 1;
+            this.button_Minimize.UseVisualStyleBackColor = true;
+            this.button_Minimize.Click += new System.EventHandler(this.button_Minimize_Click);
+            // 
+            // button_Calendar
+            // 
+            this.button_Calendar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_Calendar.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_Calendar.Location = new System.Drawing.Point(0, 88);
+            this.button_Calendar.Name = "button_Calendar";
+            this.button_Calendar.Size = new System.Drawing.Size(218, 44);
+            this.button_Calendar.TabIndex = 5;
+            this.button_Calendar.Text = "Kalendár";
+            this.button_Calendar.UseVisualStyleBackColor = true;
+            this.button_Calendar.Click += new System.EventHandler(this.button_Calendar_Click);
             // 
             // Form_Main
             // 
@@ -211,6 +225,7 @@
         private System.Windows.Forms.Panel panel_Menu_Title;
         private System.Windows.Forms.Button button_Pomodoro;
         private System.Windows.Forms.Panel panel_Buttons;
+        private System.Windows.Forms.Button button_Calendar;
     }
 }
 

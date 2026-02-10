@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Skolsky_pomocnik
 {
-    public partial class PomodoroTimer : UserControl
+    public partial class PomodoroTimerControl : UserControl
     {
         private Timer timer = new Timer();
         private int remainingSeconds = 0;
         private bool isWorkInterval = true;
         private int initialSeconds = 0; // Track the starting time
 
-        public PomodoroTimer()
+        public PomodoroTimerControl()
         {
             InitializeComponent();
             timer.Interval = 1000;

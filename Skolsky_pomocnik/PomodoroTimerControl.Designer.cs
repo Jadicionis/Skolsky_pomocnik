@@ -1,6 +1,6 @@
 ﻿namespace Skolsky_pomocnik
 {
-    partial class PomodoroTimer
+    partial class PomodoroTimerControl
     {
         /// <summary> 
         /// Required designer variable.

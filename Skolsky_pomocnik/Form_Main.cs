@@ -69,7 +69,12 @@ namespace Skolsky_pomocnik
 
         private void button_Pomodoro_Click(object sender, EventArgs e)
         {
-            ShowApp(new PomodoroTimer());
+            ShowApp(new PomodoroTimerControl());
+        }
+
+        private void button_Calendar_Click(object sender, EventArgs e)
+        {
+            ShowApp(new CalendarControl());
         }
     }
 }
